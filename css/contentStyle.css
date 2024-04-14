@@ -1,0 +1,67 @@
+/* img {
+    filter: blur(10px);
+} */
+
+.capsule-button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 20px; /* Half of the button's height to create a capsule shape */
+    background-color: #28a745;
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add cursor on hover */
+}
+
+.disabled-div {
+    pointer-events: none; /* Disable pointer events */
+    opacity: 0.5;
+    filter: blur(2px); /* Apply a blur filter with 5px radius */
+}
+
+.btn-success-like {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-success-like:hover {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.btn-success-like:focus {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+}
+
+.btn-success-like:active {
+    color: #fff;
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+.btn-success-like.disabled,
+.btn-success-like:disabled {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+a {
+    text-decoration: none;
+}

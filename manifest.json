@@ -1,0 +1,61 @@
+{
+    "manifest_version": 3,
+    "name": "The Extension",
+    "version": "0.0.1",
+    "description": "This is just a second fucking test",
+    "author": "resa.komara.akbari@gmail.com",
+    "options_page": "html/options.html",
+    "icons": {
+        "16": "icon/icon_16.png",
+        "48": "icon/icon_48.png",
+        "128": "icon/icon_128.png"
+    },
+    "action": {
+        "default_popup": "html/popup.html",
+        "default_icon": {
+            "16": "icon/icon_16.png",
+            "48": "icon/icon_48.png",
+            "128": "icon/icon_128.png"
+        },
+        "default_title": "Please click me UwU"
+    },
+    "background": {
+        "service_worker": "js/background.js"
+    },
+    "permissions": [
+        "storage",
+        "alarms",
+        "contextMenus",
+        "http://127.0.0.1:8000/",
+        "https://chrome.server.resaka.my.id/"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://mail.google.com/*"
+            ],
+            "js": [
+                "js/jquery.min.js",
+                "js/contentScript.js"
+            ],
+            "css": [
+                "css/animate.min.css",
+                "css/contentStyle.css"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "matches": [
+                "https://*.bing.com/*"
+            ],
+            "js": [
+                "js/contentScript.js"
+            ]
+        }
+    ],
+    "externally_connectable": {
+        "matches": [
+            "https://mail.google.com/*"
+        ]
+    }
+}
