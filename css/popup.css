@@ -5,3 +5,11 @@ body {
 #switchBTN {
     width: 100px;
 }
+
+body {
+    background-color: darkolivegreen;
+}
+
+.card {
+    background-color: gray;
+}

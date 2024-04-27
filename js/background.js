@@ -5,7 +5,7 @@ chrome.runtime.onInstalled.addListener(function () {
     console.log('installed');
 });
 
-chrome.action.setBadgeText({text: 'ON'});
+// chrome.action.setBadgeText({text: 'ON'});
 
 function test(a) {
     if (a == 'iya') {

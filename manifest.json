@@ -1,21 +1,21 @@
 {
     "manifest_version": 3,
-    "name": "The Extension",
+    "name": "Shielded [ALPHA]",
     "version": "0.0.1",
-    "description": "This is just a second fucking test",
+    "description": "Shielded is a powerful Chrome extension designed to protect your inbox from fraud and phishing attacks.",
     "author": "resa.komara.akbari@gmail.com",
     "options_page": "html/options.html",
     "icons": {
-        "16": "icon/icon_16.png",
-        "48": "icon/icon_48.png",
-        "128": "icon/icon_128.png"
+        "16": "icon/shielded-16.png",
+        "48": "icon/shielded-48.png",
+        "128": "icon/shielded-128.png"
     },
     "action": {
         "default_popup": "html/popup.html",
         "default_icon": {
-            "16": "icon/icon_16.png",
-            "48": "icon/icon_48.png",
-            "128": "icon/icon_128.png"
+            "16": "icon/shielded-16.png",
+            "48": "icon/shielded-48.png",
+            "128": "icon/shielded-128.png"
         },
         "default_title": "Please click me UwU"
     },
