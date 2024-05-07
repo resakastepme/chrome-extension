@@ -24,7 +24,6 @@
     },
     "permissions": [
         "storage",
-        "alarms",
         "contextMenus",
         "http://127.0.0.1:8000/",
         "https://chrome.server.resaka.my.id/"
