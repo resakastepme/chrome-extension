@@ -16,12 +16,13 @@ function generateSimpleUserID() {
 
 // FUNCTION TO SEND USER INFORMATION
 function sendExtUser() {
-    chrome.storage.local.get(['userId']).then(function (result) {
+    chrome.storage.local.get(['userId', 'useExternal']).then(function (result) {
         const user_hash = result.userId;
         const device = navigator.userAgent;
+        const useExternal = result.useExternal;
 
         // FETCH XHR
-        const url = 'http://127.0.0.1:8000/api/v1/ext-user';
+        const url = useExternal == 1 ? 'https://chrome.server.resaka.my.id/api/v1/ext-user' : 'http://127.0.0.1:8000/api/v1/ext-user';
         const headers = {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer 1|zaQoCF4MGINb2JKOGwrKa2Tk3KtJEEHINUZLX7yM160d4f8f'
@@ -57,6 +58,17 @@ function sendExtUser() {
 chrome.runtime.onInstalled.addListener(function () {
     // INITIATE APP IS INSTALLED
     console.log('app installed..');
+
+    // USE EXTERNAL SERVER OR INTERNAL SERVER?????
+    chrome.storage.local.set({ useExternal: 0 }).then(function () {
+        chrome.storage.local.get('useExternal', function(data) {
+            if (data.useExternal == 1) {
+                console.log('Using External Server!');
+            } else {
+                console.log('Using Internal Server!');
+            }
+        });
+    });
 
     // CREATE KEY ON/OFF TO ON
     chrome.storage.local.set({ ExtStat: 1 }).then(function () {

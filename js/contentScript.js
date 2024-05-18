@@ -31,30 +31,33 @@ $(document).ready(function () {
         $('.capsule-button').on('click', function (e) {
             e.preventDefault();
 
+            // DOM ISI EMAIL
             var dom = $('.ii').html();
 
             if (dom) {
-                $.ajax({
-                    url: 'http://127.0.0.1:8000/api/v1/test',
-                    // url: 'https://chrome.server.resaka.my.id/api/v1/test',
-                    type: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        // 'Authorization': 'Bearer 2|uKWsOkeYxntTB9xJqVoHTe4k0grUCp1ukRY145nVd745b0ff'
-                        'Authorization': 'Bearer 1|zaQoCF4MGINb2JKOGwrKa2Tk3KtJEEHINUZLX7yM160d4f8f'
-                    },
-                    beforeSend: function () {
-                        $('.capsule-button').html('WAITING..');
-                    },
-                    success: function (response) {
-                        var result = response;
-                        // console.log(result);
-                        $('.capsule-button').html(result);
 
-                        // sendResponse({result});
-                    }
-                });
+                chrome.storage.local.get(['useExternal']).then((result) => {
+                    const useExternal = result.useExternal;
 
+                    $.ajax({
+                        url: useExternal == 1 ? 'https://chrome.server.resaka.my.id/api/v1/test' : 'http://127.0.0.1:8000/api/v1/test',
+                        type: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer 1|zaQoCF4MGINb2JKOGwrKa2Tk3KtJEEHINUZLX7yM160d4f8f'
+                        },
+                        beforeSend: function () {
+                            $('.capsule-button').html('WAITING..');
+                        },
+                        success: function (response) {
+                            var result = response;
+                            $('.capsule-button').html(result);
+                        }
+                    });
+
+                })
+
+                // CUSTOM NAVIGATION
                 $('.aeH').before('<h3 class="custom-div animate__animated animate__fadeIn animate__slow" style="margin-left: 20px; text-align: center;"> AUTO SCAN </h3>');
                 $('.aeF').addClass('disabled-div');
 
@@ -94,27 +97,29 @@ $(document).ready(function () {
             var textBox = $('.a3s').text().replace(/\s+/g, ' ');
             console.log(textBox);
 
-            $.ajax({
-                url: 'http://127.0.0.1:8000/api/v1/insert-dataset',
-                // url: 'https://chrome.server.resaka.my.id/api/v1/test',
-                type: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    // 'Authorization': 'Bearer 2|uKWsOkeYxntTB9xJqVoHTe4k0grUCp1ukRY145nVd745b0ff'
-                    'Authorization': 'Bearer 1|zaQoCF4MGINb2JKOGwrKa2Tk3KtJEEHINUZLX7yM160d4f8f'
-                },
-                beforeSend: function () {
-                    console.log('sending text.....');
-                },
-                data: JSON.stringify({
-                    text: textBox
-                }),
-                success: function (response) {
-                    console.log('status: '+response.status);
-                    console.log('message: '+response.message);
-                    // sendResponse({result});
-                }
-            });
+            chrome.storage.local.get(['useExternal']).then((result) => {
+                const useExternal = result.useExternal;
+
+                $.ajax({
+                    url: useExternal == 1 ? 'https://chrome.server.resaka.my.id/api/v1/insert-dataset' : 'http://127.0.0.1:8000/api/v1/insert-dataset',
+                    type: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer 1|zaQoCF4MGINb2JKOGwrKa2Tk3KtJEEHINUZLX7yM160d4f8f'
+                    },
+                    beforeSend: function () {
+                        console.log('sending text.....');
+                    },
+                    data: JSON.stringify({
+                        text: textBox
+                    }),
+                    success: function (response) {
+                        console.log('status: ' + response.status);
+                        console.log('message: ' + response.message);
+                    }
+                });
+
+            })
 
         });
 
@@ -133,6 +138,3 @@ $(document).ready(function () {
     });
 
 });
-
-// console.log('TEST');
-
