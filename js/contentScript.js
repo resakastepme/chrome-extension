@@ -35,11 +35,12 @@ $(document).ready(function () {
 
             if (dom) {
                 $.ajax({
-                    // url: 'http://127.0.0.1:8000/api/v1/test',
-                    url: 'https://chrome.server.resaka.my.id/api/v1/test',
+                    url: 'http://127.0.0.1:8000/api/v1/test',
+                    // url: 'https://chrome.server.resaka.my.id/api/v1/test',
                     type: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
+                        // 'Authorization': 'Bearer 2|uKWsOkeYxntTB9xJqVoHTe4k0grUCp1ukRY145nVd745b0ff'
                         'Authorization': 'Bearer 1|zaQoCF4MGINb2JKOGwrKa2Tk3KtJEEHINUZLX7yM160d4f8f'
                     },
                     beforeSend: function () {
@@ -47,7 +48,7 @@ $(document).ready(function () {
                     },
                     success: function (response) {
                         var result = response;
-                        console.log(result);
+                        // console.log(result);
                         $('.capsule-button').html(result);
 
                         // sendResponse({result});
@@ -83,11 +84,50 @@ $(document).ready(function () {
 
             chrome.runtime.sendMessage("OpenPopup");
 
+            // TO GET TEXT
+            // var textBox = "";
+            // $('.a3s p').each(function () {
+            //     var text = $(this).text();
+            //     textBox += text;
+            // });
+
+            var textBox = $('.a3s').text().replace(/\s+/g, ' ');
+            console.log(textBox);
+
+            $.ajax({
+                url: 'http://127.0.0.1:8000/api/v1/insert-dataset',
+                // url: 'https://chrome.server.resaka.my.id/api/v1/test',
+                type: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    // 'Authorization': 'Bearer 2|uKWsOkeYxntTB9xJqVoHTe4k0grUCp1ukRY145nVd745b0ff'
+                    'Authorization': 'Bearer 1|zaQoCF4MGINb2JKOGwrKa2Tk3KtJEEHINUZLX7yM160d4f8f'
+                },
+                beforeSend: function () {
+                    console.log('sending text.....');
+                },
+                data: JSON.stringify({
+                    text: textBox
+                }),
+                success: function (response) {
+                    console.log('status: '+response.status);
+                    console.log('message: '+response.message);
+                    // sendResponse({result});
+                }
+            });
+
         });
 
-    }, 2000);
+        // TO GET LINK
+        // $('.a3s a').each(function () {
+        //     var href = $(this).attr('href');
+        //     console.log(href);
+        // });
 
-    $(window).on('hashchange', function() {
+
+    }, 5000);
+
+    $(window).on('hashchange', function () {
         $('.custom-div').remove();
         $('.aeF').removeClass('disabled-div');
     });

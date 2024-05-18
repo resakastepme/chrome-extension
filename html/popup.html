@@ -11,37 +11,60 @@
 
 <body>
 
+    <div class="card position-fixed" style="width: 100%; margin-top: -4%; display: none;" id="alertCard">
+        <div class="card-body" id="alertText" style="text-align: center; font-weight: bold;">
+
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col">
 
-                <div class="card shadow rounded border-0 mt-3">
+                <img src="../img/MARQUEE.jpg" class="img-marquee" />
+                <p class="logo-text"> With AI Assistant </p>
+
+                <!-- <div class="card shadow rounded border-0"> -->
+                    <div class="card-body ms-2">
+
+                        <p> userid: <span id="userId"></span> <a href="." class="ms-2" id="gantiUserId"> ganti userid? </a> <span class="spinner-border text-secondary spinner-border-sm ms-1" style="display: none;" id="userIdSpinner"></span> </p>
+
+                    </div>
+                <!-- </div> -->
+
+                <div class="card shadow rounded border-0 mt-1">
                     <div class="card-body">
+                        <p class="mt-1" style="margin-bottom: -0.5%; font-weight: bold;"> User Agent </p>
+                        <span id="device"></span>
+                    </div>
+                </div>
 
-                        <div class="row">
-                            <div class="col-8">
-                                <h3> WELCOME </h3>
-                            </div>
-                            <div class="col-4">
-
-                                <section id="switchArea">
-
-                                </section>
-
-                            </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            test
                         </div>
-
+                        <div class="col-4">
+                            test
+                        </div>
+                        <div class="col-4">
+                            test
+                        </div>
                     </div>
                 </div>
 
-                <div class="card shadow rounded border-0 mt-3">
-                    <div class="card-body">
-                        <h1> KOSONG.... </h1>
-                    </div>
-                </div>
+                <!-- <div align="center">
+                    <span class="text">Aktifasi</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div> -->
 
             </div>
+
         </div>
+    </div>
     </div>
 
 </body>
