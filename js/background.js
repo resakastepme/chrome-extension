@@ -58,6 +58,16 @@ chrome.runtime.onInstalled.addListener(function () {
     // INITIATE APP IS INSTALLED
     console.log('app installed..');
 
+    // CREATE KEY ON/OFF TO ON
+    chrome.storage.local.set({ ExtStat: 1 }).then(function () {
+        console.log('ExtStat ON!');
+    });
+
+    // CREATE KEY AUTO ANALYZE TO ON
+    chrome.storage.local.set({ AutoAnalyze: 1 }).then(function () {
+        console.log('AutoAnalyze ON!');
+    });
+
     // CHECK USERID
     chrome.storage.local.get(['userId']).then(function (result) {
         var userId = result.userId;

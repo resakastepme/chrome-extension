@@ -24,42 +24,44 @@
                 <img src="../img/MARQUEE.jpg" class="img-marquee" />
                 <p class="logo-text"> With AI Assistant </p>
 
-                <!-- <div class="card shadow rounded border-0"> -->
-                    <div class="card-body ms-2">
-
-                        <p> userid: <span id="userId"></span> <a href="." class="ms-2" id="gantiUserId"> ganti userid? </a> <span class="spinner-border text-secondary spinner-border-sm ms-1" style="display: none;" id="userIdSpinner"></span> </p>
-
-                    </div>
-                <!-- </div> -->
-
                 <div class="card shadow rounded border-0 mt-1">
                     <div class="card-body">
-                        <p class="mt-1" style="margin-bottom: -0.5%; font-weight: bold;"> User Agent </p>
-                        <span id="device"></span>
+
+                        <div class="row" align="center">
+                            <div class="col-4">
+                                <p style="font-weight: bold;"> analisa </p>
+                                <p> 1238 </p>
+                            </div>
+                            <div class="col-4">
+                                <p style="font-weight: bold;"> harmless </p>
+                                <p> 2345 </p>
+                            </div>
+                            <div class="col-4">
+                                <p style="font-weight: bold;"> malicious </p>
+                                <p> 546 </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <div class="container">
-                    <div class="row">
-                        <div class="col-4">
-                            test
-                        </div>
-                        <div class="col-4">
-                            test
-                        </div>
-                        <div class="col-4">
-                            test
-                        </div>
-                    </div>
+                <div class="mt-2" align="center">
+                    analisa otomatis <span> <input type="checkbox" class="ms-1 mb-4" style="cursor: pointer;" id="autoAnalyze">
+                    </span> <br>
+                    <!-- <section id="onoffSection"></section> -->
+                    <img src="../img/on.png" style="height: 40%; width: 40%; cursor: pointer; display: none;" id="onImage">
+                    <img src="../img/off.png" style="height: 40%; width: 40%; cursor: pointer; display: none;" id="offImage">
                 </div>
 
-                <!-- <div align="center">
-                    <span class="text">Aktifasi</span>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div> -->
+                <div class="card-body ms-2">
+
+                    <p> <span> <img src="../img/setting.png" style="height: 20px; width: 40px; cursor: pointer;">
+                            </button> </span> <span class="ms-1" id="userId"></span> <a href="." class="ms-2"
+                            id="gantiUserId"> ganti userid? </a> <span
+                            class="spinner-border text-secondary spinner-border-sm ms-1" style="display: none;"
+                            id="userIdSpinner"></span> </p>
+
+                </div>
 
             </div>
 

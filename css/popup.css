@@ -1,5 +1,5 @@
 body {
-    height: 600px;
+    height: 100px;
     width: 400px;
     background-color: white;
 }
@@ -11,7 +11,7 @@ body::before {
     right: 0;
     bottom: 0;
     background-image: url('../img/background.png');
-    background-size: cover; /* Ensure the image covers the entire container */
+    background-size:cover; /* Ensure the image covers the entire container */
     background-position: center; /* Center the background image */
     opacity: 0.7; /* Adjust the opacity as needed */
     z-index: -1; /* Ensure the pseudo-element is behind the container content */
@@ -25,7 +25,7 @@ body::before {
 }
 
 .card-body p {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Calibri', Times, serif;
 }
 
 .card-body p span {
@@ -33,7 +33,7 @@ body::before {
 }
 
 .img-marquee {
-    height: 50%;
+    height: 25%;
     width: 100%;
     /* position: relative; */
 }
