@@ -113,7 +113,7 @@ $('#autoAnalyze').on('change', function (e) {
 
 // SETTING BUTTON REDIRECT
 $('#settingBTN').on('click', function (e) {
-    chrome.tabs.create({ url: '../html/options.html' }, function(tab) {
+    chrome.tabs.create({ url: '../html/options.html' }, function (tab) {
         console.log('Options page opened in a new tab:', tab);
     });
 })
@@ -213,7 +213,6 @@ $(document).ready(function () {
             }
 
         })
-
 
     });
 

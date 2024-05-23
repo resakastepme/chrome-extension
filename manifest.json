@@ -26,7 +26,9 @@
         "storage",
         "contextMenus",
         "http://127.0.0.1:8000/",
-        "https://chrome.server.resaka.my.id/"
+        "https://chrome.server.resaka.my.id/",
+        "https://api.openai.com/",
+        "https://www.virustotal.com/"
     ],
     "content_scripts": [
         {
@@ -39,7 +41,8 @@
             ],
             "css": [
                 "css/animate.min.css",
-                "css/contentStyle.css"
+                "css/contentStyle.css",
+                "css/shieldedBS.css"
             ],
             "run_at": "document_end"
         },
