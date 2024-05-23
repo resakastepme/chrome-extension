@@ -31,6 +31,7 @@ chrome.storage.local.get(['userId']).then((result) => {
 $(document).ready(function () {
 
     var idAnalisa;
+    const openAIKey = 'OPENAI_API_KEY';
 
     function getIdUser() {
         var id_user = $('#shieldedUserId').val();
@@ -225,7 +226,7 @@ $(document).ready(function () {
                 type: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bearer sk-proj-tT40EintgesTTrajBiWET3BlbkFJS5PACatqXdj2sz3NJP6E'
+                    'Authorization': 'Bearer ' + openAIKey
                 },
                 beforeSend: function () {
                     $('#spinnerAnalisaRingkasan').show();
