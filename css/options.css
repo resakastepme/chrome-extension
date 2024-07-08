@@ -1,3 +1,64 @@
 body {
-    background-color: green;
+    padding: 50px;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77a6f7 3px solid;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header ul {
+    padding: 0;
+    list-style: none;
+}
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+.main-content {
+    margin: 20px 0;
+}
+.step {
+    margin-bottom: 20px;
+}
+.step h2 {
+    color: #333;
+}
+.step p {
+    margin: 10px 0;
+}
+.step img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+/* Small Spinner Border */
+.shielded-spinner-border-sm {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: text-bottom;
+    border: 0.2em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: shielded-spinner-border-sm 0.75s linear infinite;
+}
+
+@keyframes shielded-spinner-border-sm {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Text Secondary */
+.shielded-text-secondary {
+    color: #6c757d !important;
 }

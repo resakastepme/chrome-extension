@@ -44,6 +44,13 @@
     cursor: pointer;
 }
 
+.shielded-btn-sm {
+    padding: 0.25rem 0.5rem; /* Adjust the padding for smaller size */
+    font-size: 0.875rem;     /* Smaller font size */
+    line-height: 1.5;
+    border-radius: 0.2rem;   /* Adjust the border radius if needed */
+}
+
 /* Success Button */
 .shielded-btn-success {
     color: #fff;
@@ -172,4 +179,85 @@
 .shielded-highlight {
     background-color: yellow; /* or any highlight style you prefer */
     border: 5px solid rgb(8, 122, 151);
+}
+
+
+/* 333333333333333333333333333333333333333333333333333333333333333333333333333333333 */
+
+ /* Shielded Container */
+ .shielded-container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Calibri', Times, serif;
+}
+
+@media (min-width: 576px) {
+    .shielded-container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .shielded-container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .shielded-container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .shielded-container {
+        max-width: 1140px;
+    }
+}
+
+/* Shielded Row */
+.shielded-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Shielded Column */
+.shielded-col {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+/* Shielded Column 6 */
+.shielded-col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.floating-container {
+    position: fixed;
+    top: 60px;
+    /* Adjust based on your navbar height */
+    right: 200px;
+    width: 300px;
+    min-width: 800px;
+    /* Minimum width */
+    min-height: 200px;
+    /* Minimum height */
+    resize: both;
+    /* Allow both horizontal and vertical resizing */
+    overflow: auto;
+    /* Ensure content is scrollable if resized smaller */
+    display: none;
+    z-index: 1050;
+    /* Bootstrap modals have a z-index of 1050 */
 }

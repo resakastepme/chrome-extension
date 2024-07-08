@@ -22,9 +22,13 @@
     "background": {
         "service_worker": "js/background.js"
     },
+    "host_permissions": [
+        "https://*.mail-attachment.googleusercontent.com/"
+    ],
     "permissions": [
         "storage",
         "contextMenus",
+        "downloads",
         "http://127.0.0.1:8000/",
         "https://chrome.server.resaka.my.id/",
         "https://api.openai.com/",
@@ -42,17 +46,26 @@
             "css": [
                 "css/animate.min.css",
                 "css/contentStyle.css",
-                "css/shieldedBS.css"
+                "css/shieldedBS.css",
+                "css/modal.css"
             ],
             "run_at": "document_end"
         },
         {
             "matches": [
-                "https://*.bing.com/*"
+                "https://*/*/3rdparty/roundcube/*"
             ],
             "js": [
-                "js/contentScript.js"
-            ]
+                "js/jquery.js",
+                "js/roundcube.js"
+            ],
+            "css": [
+                "css/animate.min.css",
+                "css/contentStyle.css",
+                "css/shieldedBS.css",
+                "css/modal.css"
+            ],
+            "run_at": "document_end"
         }
     ],
     "externally_connectable": {

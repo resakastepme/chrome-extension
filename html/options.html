@@ -4,33 +4,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/options.css">
-    <title>Options - My Extension</title>
+    <title> Options - Shielded </title>
 </head>
 
 <body>
 
-    <h1> OPTIONS </h1>
-    <h4> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro necessitatibus. Atque delectus corporis
-        iure nihil quod fugiat hic minima soluta, nostrum provident sapiente beatae. Veniam laboriosam officiis ex
-        incidunt. </h4>
-    <h5> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum incidunt qui autem cumque molestias quo
-        reiciendis, quidem accusantium ipsa nihil laudantium minima nam iusto placeat saepe quae expedita pariatur et
-        facere sit explicabo. Molestias illo excepturi sapiente nihil doloremque obcaecati dolorem natus, soluta et
-        incidunt. Quisquam non incidunt fugit debitis et blanditiis illo labore optio earum, autem in commodi aut
-        aliquam consequuntur, laborum possimus, vel quidem quod architecto adipisci est nobis qui! Sit, fugit voluptas
-        magni fuga assumenda voluptatibus quisquam nesciunt. Labore hic ab facere corrupti expedita vero sit provident
-        vel laboriosam sapiente modi voluptate harum magni illum, repudiandae doloribus voluptatum laudantium, tempore
-        reprehenderit praesentium. Dolorem soluta repudiandae aut ullam! Accusantium quasi, nulla dignissimos sit quos
-        optio? Possimus quo debitis, ratione, molestias harum vero fugiat ex, in dicta architecto iste accusamus nobis
-        dolorum? Veritatis, consequatur blanditiis hic consequuntur vel qui nemo illo inventore ipsa laudantium ab modi,
-        totam magni amet. Minus ea non consequatur eligendi quo reiciendis error quibusdam? Tempore cum voluptas optio
-        eius iste culpa unde sit ratione amet officiis maiores fugit, nemo suscipit consequatur commodi quis obcaecati,
-        assumenda enim eveniet natus! Rerum ipsa fuga quas similique molestias labore eos eligendi excepturi,
-        exercitationem possimus deleniti delectus ipsum, inventore earum.</h5>
+    <!-- FAQs Start -->
+    <div class="container-fluid">
+        <div class="container py-1">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;"> <br>
+                <img src="../img/MARQUEE.jpg" style="width: 100%; height: 100%;">
+            </div>
+            <div class="row">
+
+                <div class="accordion" id="accordionFAQ1">
+
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.1s">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                                id="accor1Btn">
+                                Tabel Riwayat
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionFAQ1">
+
+                            <div class="table-responsive-lg">
+                                <table class="table table-hover" border="2" id="tableRiwayat">
+                                    <thead>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="accordion-item wow fadeIn" data-wow-delay="0.2s">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Tutorial Aplikasi
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionFAQ1">
+                            <div class="accordion-body">
+
+                                <div class="card shadow border-0">
+                                    <div class="card-body">
+                                        <section id="intro" class="step">
+                                            <h2>Pengenalan</h2>
+                                            <p>Shielded adalah ekstensi Chrome yang membantu Anda menganalisis email
+                                                untuk mendeteksi percobaan
+                                                phishing. Ekstensi ini dirancang untuk memberikan peringatan jika ada
+                                                indikasi phishing dalam email yang
+                                                Anda terima.</p>
+                                        </section>
+                                    </div>
+                                </div>
+
+                                <div class="card shadow border-0 mt-3">
+                                    <div class="card-body">
+                                        <section id="install" class="step">
+                                            <h2>Instalasi</h2>
+                                            <p>Ikuti langkah-langkah di bawah ini untuk menginstal Shielded di browser
+                                                Chrome Anda:</p>
+                                            <ol>
+                                                <li>Buka browser Chrome dan pergi ke halaman <a
+                                                        href="chrome://extensions/" target="_blank">Ekstensi
+                                                        Chrome</a>.</li>
+                                                <li>Aktifkan mode pengembang dengan mengklik tombol "Developer mode" di
+                                                    sudut kanan atas.</li>
+                                                <li>Klik tombol "Load unpacked" dan pilih folder tempat Anda menyimpan
+                                                    file ekstensi Shielded.</li>
+                                                <li>Setelah itu, ekstensi Shielded akan muncul di daftar ekstensi Anda
+                                                    dan siap digunakan.</li>
+                                            </ol>
+                                        </section>
+                                    </div>
+                                </div>
+
+                                <div class="card shadow border-0 mt-3">
+                                    <div class="card-body">
+                                        <section id="usage" class="step">
+                                            <h2>Penggunaan</h2>
+                                            <p>Setelah menginstal Shielded, ikuti langkah-langkah berikut untuk
+                                                menganalisis email Anda:</p>
+                                            <ol>
+                                                <li>Buka Gmail atau layanan email lainnya di browser Chrome.</li>
+                                                <li>Buka email yang ingin Anda analisis.</li>
+                                                <li>Klik ikon Shielded di bilah ekstensi Chrome untuk menjalankan
+                                                    analisis pada email tersebut.</li>
+                                                <li>Shielded akan memproses email dan menampilkan hasil analisis yang
+                                                    menunjukkan apakah email tersebut
+                                                    berpotensi phishing atau tidak.</li>
+                                            </ol>
+                                        </section>
+                                    </div>
+                                </div>
+
+                                <div class="card shadow border-0 mt-3">
+                                    <div class="card-body">
+                                        <section id="support" class="step">
+                                            <h2>Dukungan</h2>
+                                            <p>Jika Anda mengalami masalah atau memiliki pertanyaan, Anda dapat
+                                                menghubungi tim dukungan kami melalui
+                                                email di <a href="mailto:support@shielded.com">support@shielded.com</a>
+                                            </p>
+                                        </section>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- FAQs Start -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalJudul">
+                        <span class="shielded-spinner-border-sm shielded-text-secondary mt-3" style="display: block;"
+                            id="spinnerModalJudul"></span>
+                    </h5>
+                    <button type="button" class="btn-close" id="closeModalBtn" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-8">
+
+                                <b> Pengirim </b>
+                                <section class="modalPengirim">
+                                    <span class="shielded-spinner-border-sm shielded-text-secondary mt-3"
+                                        style="display: block;" id="spinnerModalPengirim"></span>
+                                </section>
+                                <b class="mt-5"> AI Assistant </b>
+                                <section id="modalRingkasan">
+                                    <span class="shielded-spinner-border-sm shielded-text-secondary mt-3"
+                                        style="display: block;" id="spinnerModalRingkasan"></span>
+                                </section>
+
+                            </div>
+                            <div class="col-4 d-flex justify-content-center align-items-center">
+
+                                <p id="modalTanggal">
+                                    <span class="shielded-spinner-border-sm shielded-text-secondary mt-3"
+                                        style="display: block;" id="spinnerModalTanggal"></span>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+
+                                <div class="card shadow border-0 mt-4">
+                                    <div class="card-header">
+
+                                        <b> Domain </b>
+
+                                    </div>
+                                    <div class="card-body">
+
+                                        <section id="modalDomain">
+                                            <span class="shielded-spinner-border-sm shielded-text-secondary mt-3"
+                                                style="display: block;" id="spinnerModalDomain"></span>
+                                        </section>
+
+                                    </div>
+                                </div>
+
+                                <div class="card shadow border-0 mt-4">
+                                    <div class="card-header">
+
+                                        <b> URL </b>
+
+                                    </div>
+                                    <div class="card-body">
+
+                                        <section id="modalUrl">
+                                            <span class="shielded-spinner-border-sm shielded-text-secondary mt-3"
+                                                style="display: block;" id="spinnerModalUrl"></span>
+                                        </section>
+
+                                    </div>
+                                </div>
+
+                                <div class="card shadow border-0 mt-4">
+                                    <div class="card-header">
+
+                                        <b> File </b>
+
+                                    </div>
+                                    <div class="card-body">
+
+                                        <section id="modalFile">
+                                            <span class="shielded-spinner-border-sm shielded-text-secondary mt-3"
+                                                style="display: block;" id="spinnerModalFile"></span>
+                                        </section>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="closeModalBtn">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.dataTables.min.js"></script>
+<script src="../js/dataTables.bootstrap4.min.js"></script>
 <script type="text/javascript" src="../js/options.js"></script>
 
 </html>
